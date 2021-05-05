@@ -10,5 +10,7 @@ Rails.application.routes.draw do
     post "/organizations" => "organizations#create"
     get "/organizations" => "organizations#index"
 
+    post "/shifts" => "shifts#create"
+    get "/shifts" => "shifts#index"
   end
 end
