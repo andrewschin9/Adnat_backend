@@ -12,5 +12,7 @@ Rails.application.routes.draw do
 
     post "/shifts" => "shifts#create"
     get "/shifts" => "shifts#index"
+    delete "/shifts/:id" => "shifts#destroy"
+
   end
 end

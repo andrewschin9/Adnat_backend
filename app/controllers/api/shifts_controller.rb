@@ -19,5 +19,10 @@ class Api::ShiftsController < ApplicationController
     @shifts = Shift.all
     render "index.json.jbuilder"
   end
-  
+
+  def destroy
+    @shift = Shift.find_by(id: params[:id])
+    @shift.destroy
+    render json: {message: "Shift successfully removed!"}
+  end  
 end
