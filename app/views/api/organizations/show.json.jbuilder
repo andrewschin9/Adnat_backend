@@ -1,3 +1,3 @@
 json.id @organization.id
-json.title @organization.name
-json.body @organization.hourly_rate
+json.name @organization.name
+json.hourly_rate @organization.hourly_rate
