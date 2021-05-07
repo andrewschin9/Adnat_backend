@@ -1,4 +1,6 @@
 class Api::OrganizationsController < ApplicationController
+  before_action :authenticate_user, only: [:create, :index, :destroy]
+
   def create
     @organization = Organization.new(
       name: params[:name],
@@ -15,4 +17,5 @@ class Api::OrganizationsController < ApplicationController
     @organizations = Organization.all
     render "index.json.jbuilder"
   end
+
 end
